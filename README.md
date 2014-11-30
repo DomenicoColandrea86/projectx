@@ -3,7 +3,7 @@
 
 ### A PROJECT BUILT WITH THE MEAN STACK
 [MongoDB](http://www.mongodb.org/), [Node.js](http://www.nodejs.org/), [Express](http://expressjs.com/), and [AngularJS](http://angularjs.org/)
-##### This project is a work in progress and may or may not work. I havent figured out what to build or what to call it so for now it is only known as .... project
+##### This project is a work in progress and may or may not work. I havent figured out what to build or what to call it so for now it is only known as .... projectx
 
 
 ## Prerequisites
