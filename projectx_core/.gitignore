@@ -1,0 +1,15 @@
+.vagrant
+.DS_Store
+
+.idea/*
+*.iml
+projectFilesBackup
+.tmp/
+.librarian/
+.vagrant/
+
+modules/apt/*
+modules/heroku/*
+modules/mongodb/*
+modules/stdlib/*
+modules/wget/*

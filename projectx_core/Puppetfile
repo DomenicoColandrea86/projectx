@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+#^syntax detection
+forge "https://forgeapi.puppetlabs.com"
+# apt module
+mod 'puppetlabs-apt'
+# std-lib module
+mod 'puppetlabs-stdlib'
+# concat module
+mod 'puppetlabs-concat'
+# mongodb module
+mod 'puppetlabs-mongodb'

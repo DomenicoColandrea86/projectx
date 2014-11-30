@@ -1,0 +1,80 @@
+// ------------------------------------------------------------
+// Shame
+//
+// A home for Styles that need to die in a fire, but are used
+// in lots of places.
+//
+// * Utilities
+// * Floating Header
+// * Scroll Shadows
+// ------------------------------------------------------------
+
+//
+// Utilities
+// --------------------------------------------------
+// We have more robust alternatives in global.scss
+// Are any of these actually even used anywhere?
+
+.hidden,
+.visuallyhidden,
+.screen-reader-text {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
+}
+
+//
+// Random
+// --------------------------------------------------
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+	display: none !important;
+}
+
+.ng-invalid.ng-dirty {
+	border-color: #FA787E;
+}
+
+.ng-valid.ng-dirty {
+	border-color: #78FA89;
+}
+
+@media (min-width: 992px) {
+	.nav-users {
+		position: fixed;
+	}
+}
+
+.remove-account-container {
+	display: inline-block;
+	position: relative;
+}
+
+.btn-remove-account {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+
+.content {
+	margin-top: 50px;
+}
+
+.undecorated-link:hover {
+	text-decoration: none;
+}
