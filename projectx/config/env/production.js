@@ -30,12 +30,12 @@ module.exports = {
 		callbackURL: 'https://dev.projectx.com:3000/auth/twitter/callback'
 	},
 	mailer: {
-		from: process.env.MAILER_FROM || 'MAILER_FROM',
+		from: process.env.MAILER_FROM || 'dom@cainkade.com',
 		options: {
-			service: process.env.MAILER_SERVICE_PROVIDER || 'MAILER_SERVICE_PROVIDER',
+			service: process.env.MAILER_SERVICE_PROVIDER || 'gmail',
 			auth: {
-				user: process.env.MAILER_EMAIL_ID || 'MAILER_EMAIL_ID',
-				pass: process.env.MAILER_PASSWORD || 'MAILER_PASSWORD'
+				user: process.env.MAILER_EMAIL_ID || 'domenico.colandrea@cainkade.com',
+				pass: process.env.MAILER_PASSWORD || 'javasun1'
 			}
 		}
 	}
