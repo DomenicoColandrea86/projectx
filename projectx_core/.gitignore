@@ -13,3 +13,5 @@ modules/heroku/*
 modules/mongodb/*
 modules/stdlib/*
 modules/wget/*
+modules/wget/*
+modules/concat/*
