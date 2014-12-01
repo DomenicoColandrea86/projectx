@@ -63,6 +63,11 @@ Connect to the virtual machine via ssh:
 * Application Server IP = 192.168.22.10
 `````
 
-####Don't forget to update your host file
+##Don't forget to... 
+
+#### update your host file
 
 ````127.0.0.1 dev.projectx.com````
+
+#### update your ````.npmrc```` file
+````vagrantPath = /$PATH_TO_VAGRANTFILE/projectx/projectx_core````
