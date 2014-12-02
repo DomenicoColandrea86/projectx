@@ -38,9 +38,15 @@ class projectx($node_version = "v0.10.33") {
       require => [Class["essentials"]]
     }
 
-    # Set up MongoDB
+    # Install MongoDB
     class { 'mongodb':
 
+    }
+
+    # Install Elastic Search
+    class {'elasticsearch':
+      version => '1.4.1',
+      require => [Class["essentials"]]
     }
 
     # This function depends on some commands in the nvm.pp file
@@ -66,18 +72,4 @@ class projectx($node_version = "v0.10.33") {
         owner  => "vagrant",
         group  => "vagrant"
     }
-
-    # # Examples of installing packages from a package.json if we need to.
-    # exec { "npm-install-packages":
-    #   cwd => "/home/vagrant/code/projectx",
-    #   command => "npm install",
-    #   require => Exec['install-node'],
-    # }
-
-    # exec { "grunt init":
-    #   cwd => "/home/vagrant/code/projectx",
-    #   command => "grunt",
-    #   require => Exec["npm-install-packages"]
-    # }
-
 }
