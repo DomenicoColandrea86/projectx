@@ -9,9 +9,9 @@ projectFilesBackup
 .vagrant/
 
 modules/apt/*
-modules/heroku/*
+modules/concat/*
+modules/gcc/*
 modules/mongodb/*
+modules/redis/*
 modules/stdlib/*
 modules/wget/*
-modules/wget/*
-modules/concat/*

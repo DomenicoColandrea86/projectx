@@ -15,7 +15,6 @@ Vagrant.configure("2") do |config|
     config.vm.hostname = "dev.projectx.com"
     config.ssh.forward_agent = true
 
-
     # Add port-forward for application
     config.vm.network :forwarded_port, guest: 3000, host: 3000
     # Add port-forward for nginx
@@ -24,6 +23,8 @@ Vagrant.configure("2") do |config|
     config.vm.network :forwarded_port, guest: 4430, host: 3000
     # Add port-forward for MongoDB
     config.vm.network :forwarded_port, guest: 27017, host: 27017
+    # Add port-forward for Redis
+    config.vm.network :forwarded_port, guest: 6379, host: 6379
     # Add port-forward for Elastic Search
     config.vm.network :forwarded_port, guest: 9200, host: 9200
     # Add port-forward for Karma tests

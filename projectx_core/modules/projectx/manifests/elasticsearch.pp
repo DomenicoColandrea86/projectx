@@ -15,6 +15,9 @@ class elasticsearch ($version) {
         source => '/tmp/elasticsearch.deb',
         require => [Package['openjdk-7-jre-headless'],File['/tmp/elasticsearch.deb']],
     }
-}
 
-elasticsearch::instance { 'es-01': }
+    exec { "start-es":
+      command => "sudo service elasticsearch restart",
+      subscribe => Package['elasticsearch']
+    }
+}

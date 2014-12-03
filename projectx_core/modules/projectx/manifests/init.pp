@@ -38,9 +38,15 @@ class projectx($node_version = "v0.10.33") {
       require => [Class["essentials"]]
     }
 
+    # Installs Redis
+    class { 'redis':
+      version => '2.8.17',
+      require => [Class["essentials"]]
+    }
+
     # Install MongoDB
     class { 'mongodb':
-
+      require => [Class["essentials"]]
     }
 
     # Install Elastic Search

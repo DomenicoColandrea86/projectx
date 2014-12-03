@@ -8,4 +8,6 @@ mod 'puppetlabs-stdlib'
 # concat module
 mod 'puppetlabs-concat'
 # mongodb module
-mod 'puppetlabs-mongodb'
+mod 'puppetlabs-mongodb', '0.8.0'
+# redis module
+mod 'thomasvandoren-redis'
