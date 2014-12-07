@@ -42,6 +42,11 @@ module.exports = function(config) {
 		// - IE (only Windows)
 		browsers: ['PhantomJS'],
 
+		plugins : [
+        	'karma-phantomjs-launcher',
+        	'karma-jasmine'
+        ],
+
 		// If browser does not capture in given timeout [ms], kill it
 		captureTimeout: 60000,
 

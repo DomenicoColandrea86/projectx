@@ -11,7 +11,15 @@ class essentials {
     ["curl",
     "libssl-dev",
     "git-core",
-    "python"
+    "python",
+    "libc6",
+    "libfontconfig1",
+    "libfreetype6",
+    "libgcc1",
+    "libjpeg8",
+    "libpng12-0",
+    "libstdc++6",
+    "zlib1g"
     ]:
   }
 
