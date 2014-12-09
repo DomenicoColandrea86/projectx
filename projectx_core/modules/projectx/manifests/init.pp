@@ -27,20 +27,6 @@ class projectx($node_version = "v0.10.33") {
         require => [Class["essentials"]]
     }
 
-    # Install casperjs test suite
-    exec { "git-casperjs":
-      cwd     => "/home/vagrant/software",
-      command => "/usr/bin/git clone git://github.com/n1k0/casperjs.git",
-      creates => "/home/vagrant/software/casperjs"
-    }
-
-    exec { "link-casperjs":
-      cwd     => "/home/vagrant/software/casperjs",
-      command => "/bin/ln -sf /home/vagrant/software/casperjs/bin/casperjs /usr/local/bin/casperjs",
-      creates => "/usr/local/bin/casperjs",
-      require => [Exec["git-casperjs"]]
-    }
-
     # Install node through NVM
     class { 'nvm':
         node_version => $node_version,
@@ -85,6 +71,20 @@ class projectx($node_version = "v0.10.33") {
           "yo",
           "mocha",
           "karma"]:
+    }
+
+    # Install casperjs test suite
+    exec { "git-casperjs":
+      cwd     => "/home/vagrant/software",
+      command => "/usr/bin/git clone git://github.com/n1k0/casperjs.git",
+      creates => "/home/vagrant/software/casperjs"
+    }
+
+    exec { "link-casperjs":
+      cwd     => "/home/vagrant/software/casperjs",
+      command => "/bin/ln -sf /home/vagrant/software/casperjs/bin/casperjs /usr/local/bin/casperjs",
+      creates => "/usr/local/bin/casperjs",
+      require => [Exec["git-casperjs"]]
     }
 
     # Make sure our code directory has proper permissions
