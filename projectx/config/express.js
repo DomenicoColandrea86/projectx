@@ -15,9 +15,8 @@ var fs = require('fs'),
 	cookieParser = require('cookie-parser'),
 	helmet = require('helmet'),
 	passport = require('passport'),
-	mongoStore = require('connect-mongo')({
-		session: session
-	}),
+	redisStore = require('connect-redis')(session),
+	redis = require("redis").createClient(),
 	flash = require('connect-flash'),
 	config = require('./config'),
 	consolidate = require('consolidate'),
@@ -85,16 +84,14 @@ module.exports = function(db) {
 	// CookieParser should be above session
 	app.use(cookieParser());
 
-	// Express MongoDB session storage
+	// Express Redis session storage
 	app.use(session({
 		saveUninitialized: true,
 		resave: true,
 		secret: config.sessionSecret,
-		store: new mongoStore({
-			db: db.connection.db,
-			collection: config.sessionCollection
-		}),
+		store: new redisStore({ host: 'localhost', port: 6379, client: redis }),
 		cookie: config.sessionCookie,
+		proxy: true,
 		name: config.sessionName
 	}));
 
