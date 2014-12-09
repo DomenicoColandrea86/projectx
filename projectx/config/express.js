@@ -90,7 +90,7 @@ module.exports = function(db) {
 		resave: true,
 		secret: config.sessionSecret,
 		store: new redisStore({ host: 'localhost', port: 6379, client: redis }),
-		cookie: config.sessionCookie,
+		cookie: (app.get('env') === 'test') ? true : false, // if NODE_ENV === 'test' set secure cookies to false
 		proxy: true,
 		name: config.sessionName
 	}));
