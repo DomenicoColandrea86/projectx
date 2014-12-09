@@ -74,6 +74,13 @@ module.exports = function(db) {
 		app.locals.cache = 'memory';
 	}
 
+	// Environment dependent cookie setting
+	if (process.env.NODE_ENV === 'test') {
+		config.sessionCookie.secure = false;
+	} else {
+		config.sessionCookie.secure = true;
+	}
+
 	// Request body parsing middleware should be above methodOverride
 	app.use(bodyParser.urlencoded({
 		extended: true
@@ -90,7 +97,7 @@ module.exports = function(db) {
 		resave: true,
 		secret: config.sessionSecret,
 		store: new redisStore({ host: 'localhost', port: 6379, client: redis }),
-		cookie: (app.get('env') === 'test') ? true : false, // if NODE_ENV === 'test' set secure cookies to false
+		cookie: config.sessionCookie,
 		proxy: true,
 		name: config.sessionName
 	}));

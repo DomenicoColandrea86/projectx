@@ -13,7 +13,6 @@ module.exports = {
 	sessionCookie: { 
 		path: '/',
 		httpOnly: true,
-		secure: true,
 		maxAge: null,
 	},
 	// The session cookie name
