@@ -11,13 +11,14 @@
 // Libraries: Code by other Homies
 // --------------------------------------------------
 
-@import "vendor/bootstrap";
+@import "vendor/bootstrap-theme";
 @import "vendor/bourbon";
 
 //
 // Patterns: Groups of Styles
 // --------------------------------------------------
 
+@import "patterns/global";
 @import "patterns/shame";
 
 //
