@@ -33,6 +33,7 @@
     "passport-local": "~1.0.0",
     "passport-facebook": "~1.0.2",
     "passport-twitter": "~1.0.2",
+    "passport.socketio": "~2.2.1",
     "lodash": "~2.4.1",
     "forever": "~0.11.0",
     "phantomjs": "~1.9.7-3",
@@ -44,7 +45,8 @@
     "chalk": "~0.5",
     "elasticsearch": "~3.0.0",
     "connect-redis": "~2.1.0",
-    "redis": "~0.12.1"
+    "redis": "~0.12.1",
+    "socket.io": "~0.9.16"
   },
   "devDependencies": {
     "grunt-autoprefixer": "~0.7.2",
