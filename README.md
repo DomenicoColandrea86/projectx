@@ -63,8 +63,8 @@ Connect to the virtual machine via ssh:
 * Application Server IP = 192.168.22.10
 `````
 
-Launch the homepage [https://dev.projectx.com]
-[https://dev.projectx.com]: https://dev.projectx.com
+Launch the homepage [https://dev.projectx.com:3000]
+[https://dev.projectx.com:3000]: https://dev.projectx.com:3000
 
 ##Don't forget to... 
 
